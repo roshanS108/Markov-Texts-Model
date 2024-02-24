@@ -31,22 +31,16 @@ public class MarkovFour {
 
         for(int k=0; k < numChars - 4; k++){
             ArrayList<String> followList = getFollows(key);
-
             if (followList.size() == 0) {
                 break;
             }
-
             index = myRandom.nextInt(followList.size());
             String next = followList.get(index);
             sb.append(next);
             key = key.substring(1) + next;
         }
-
         return sb.toString();
     }
-
-
-
     public ArrayList<String> getFollows(String key) {
         ArrayList<String> result = new ArrayList<String>();
         int startPos = 0;

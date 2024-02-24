@@ -1,11 +1,4 @@
 package com.Markovcharactermodel.markov;
-/**
- * Write a description of class MarkovRunner here.
- * 
- * @author Duke Software
- * @version 1.0
- */
-
 import edu.duke.*;
 
 public class MarkovRunner {
@@ -26,7 +19,7 @@ public class MarkovRunner {
 		FileResource fr = new FileResource();
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
-		MarkovTwo markov = new MarkovTwo();
+		MarkovThree markov = new MarkovThree();
 		markov.setTraining(st);
 //		markov.setRandom(101);
 		for(int k=0; k < 3; k++){
@@ -53,7 +46,7 @@ public class MarkovRunner {
 		MarkovFour markov = new MarkovFour();
 		markov.setTraining(st);
 		for(int k=0; k < 3; k++){
-			markov.setRandom(371);
+			markov.setRandom(25);
 			String text = markov.getRandomText(500);
 			printOut(text);
 		}
@@ -62,10 +55,10 @@ public class MarkovRunner {
 		FileResource fr = new FileResource();
 		String st = fr.asString();
 		st = st.replace('\n', ' ');
-		MarkovModel markov = new MarkovModel(8);
+		MarkovModel markov = new MarkovModel(100);
 		markov.setTraining(st);
 		for(int k=0; k < 3; k++){
-			markov.setRandom(365);
+			markov.setRandom(38);
 			String text = markov.getRandomText(500);
 			printOut(text);
 		}

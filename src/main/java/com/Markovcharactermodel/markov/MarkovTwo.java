@@ -25,7 +25,7 @@ public class MarkovTwo {
             return "";
         }
         StringBuilder sb = new StringBuilder();
-        int index = myRandom.nextInt(myText.length() - 1);
+        int index = myRandom.nextInt(myText.length() - 2);
         String key = myText.substring(index, index + 2);
         sb.append(key);
 
@@ -37,7 +37,7 @@ public class MarkovTwo {
             index = myRandom.nextInt(followList.size());
             String next = followList.get(index);
             sb.append(next);
-            key = next;
+            key = key.substring(1) + next;
         }
         return sb.toString();
     }

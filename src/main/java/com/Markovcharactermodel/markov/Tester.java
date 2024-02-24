@@ -1,5 +1,5 @@
 package com.Markovcharactermodel.markov;
-import edu.duke.FileResource;
+import edu.duke.*;
 import java.util.ArrayList;
 
 public class Tester {
