@@ -1,29 +1,13 @@
 package com.Markovcharactermodel.markov;
+import com.Markovcharactermodel.models.AbstractMarkovModel;
 
 import java.util.Random;
 import java.util.ArrayList;
-
-public class MarkovFour {
-    private String myText;
-    private Random myRandom;
-
-    public MarkovFour() {
-        myRandom = new Random();
-    }
-
-    public void setRandom(int seed){
-        myRandom = new Random(seed);
-    }
-
-    public void setTraining(String s){
-        myText = s.trim();
-    }
-
+public class MarkovFour extends AbstractMarkovModel {
     public String getRandomText(int numChars){
         if (myText == null){
             return "";
         }
-
         StringBuilder sb = new StringBuilder();
         int index = myRandom.nextInt(myText.length() - 4);
         String key = myText.substring(index, index + 4);
@@ -41,21 +25,8 @@ public class MarkovFour {
         }
         return sb.toString();
     }
-    public ArrayList<String> getFollows(String key) {
-        ArrayList<String> result = new ArrayList<String>();
-        int startPos = 0;
-
-        while(true) {
-            int index = myText.indexOf(key, startPos);
-
-            if (index == -1 || index == myText.length() - key.length()) {
-                break;
-            }
-
-            result.add(myText.substring(index + key.length(), index + key.length() + 1));
-            startPos = index + key.length();
-        }
-
-        return result;
+    public String toString() {
+        return "MarkovModel of order 4.";
     }
+
 }

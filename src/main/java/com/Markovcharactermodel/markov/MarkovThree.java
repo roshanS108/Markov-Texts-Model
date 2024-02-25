@@ -29,7 +29,7 @@ public class MarkovThree extends AbstractMarkovModel {
         return sb.toString();
     }
     public String toString(){
-        return "MarkovModel of order 1.";
+        return "MarkovModel of order 3.";
     }
 
 
