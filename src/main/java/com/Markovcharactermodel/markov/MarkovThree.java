@@ -1,24 +1,11 @@
 package com.Markovcharactermodel.markov;
 
+import com.Markovcharactermodel.models.AbstractMarkovModel;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovThree {
-
-    private String myText;
-    private Random myRandom;
-
-    public MarkovThree() {
-        myRandom = new Random();
-    }
-
-    public void setRandom(int seed){
-        myRandom = new Random(seed);
-    }
-
-    public void setTraining(String s){
-        myText = s.trim();
-    }
+public class MarkovThree extends AbstractMarkovModel {
 
     public String getRandomText(int numChars){
         if (myText == null){
@@ -41,23 +28,10 @@ public class MarkovThree {
         }
         return sb.toString();
     }
-
-    public ArrayList<String> getFollows(String key){
-
-        ArrayList<String> result = new ArrayList<String>();
-        int startPos = 0;
-
-        while(true) {
-            int index = myText.indexOf(key, startPos);
-
-            if (index == -1 || index == myText.length() - key.length()) {
-                break;
-            }
-            result.add(myText.substring(index + key.length(), index + key.length() + 1));
-            startPos = index + key.length();
-        }
-        return result;
-
+    public String toString(){
+        return "MarkovModel of order 1.";
     }
+
+
 
 }
