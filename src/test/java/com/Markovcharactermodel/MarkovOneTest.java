@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,11 +25,19 @@ public class MarkovOneTest {
     public void testGetFollowsWithSingleChar() {
         MarkovOne markovOne = new MarkovOne();
         markovOne.setTraining("abracadabra");
-        //b, c, d, r
 
-        // Test the key "a"
-        List<String> followsA = markovOne.getFollows("a");
-        assertEquals(List.of("b", "c", "d", "b"), followsA);
+        String key = "c";
+        List<String> expectedFollows = new ArrayList<>();
+        //Iterate through input text
+        for(int i = 0; i<markovOne.getMyText().length()-1; i++){
+            if (markovOne.getMyText().substring(i, i+1).equals(key)){
+                //store that in expectedFollows
+                expectedFollows.add(markovOne.getMyText().substring(i+1, i+2));
+            }
+        }
+        // Test the any key
+        List<String> followsA = markovOne.getFollows(key);
+        assertEquals(expectedFollows, followsA);
 
 
     }
