@@ -23,7 +23,7 @@ public class MarkovOneTest {
 
     @Test
     public void testGetFollowsWithSingleChar() throws IOException {
-        String testData = new String(Files.readAllBytes(Paths.get("data/testing.txt")));
+        String testData = new String(Files.readAllBytes(Paths.get("data/alice.txt")));
         MarkovOne markovOne = new MarkovOne();
         markovOne.setTraining(testData);
         String randomText = markovOne.getRandomText(5);
@@ -40,11 +40,8 @@ public class MarkovOneTest {
         }
         // Test the any key
         List<String> followsA = markovOne.getFollows(key);
-        for(String follows: followsA){
-            System.out.println(follows);
-        }
         assertEquals(expectedFollows, followsA);
-//        assertEquals(500, randomText.length());
+        assertEquals(500, randomText.length());
 
     }
     @Test
