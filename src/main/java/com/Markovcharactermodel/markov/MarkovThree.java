@@ -7,6 +7,8 @@ import java.util.Random;
 
 public class MarkovThree extends AbstractMarkovModel {
 
+    //this field is for testing
+    private String keyForTesting;
     public String getRandomText(int numChars){
         if (myText == null){
             return "";
@@ -24,6 +26,7 @@ public class MarkovThree extends AbstractMarkovModel {
             index = myRandom.nextInt(followList.size());
             String next = followList.get(index);
             sb.append(next);
+
             key = key.substring(1) + next;
         }
         return sb.toString();
