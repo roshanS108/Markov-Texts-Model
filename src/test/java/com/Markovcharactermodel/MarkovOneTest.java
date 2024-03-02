@@ -13,7 +13,7 @@ public class MarkovOneTest {
     @BeforeEach
     void setUp() {
         markovOne = new MarkovOne();
-        // Assuming there's a method to set 'myText' for testing
+        // a method to set 'myText' for testing purpose
         markovOne.setMyText("some test text");
     }
     @Test
