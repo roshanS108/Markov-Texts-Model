@@ -52,7 +52,7 @@ public class MarkovOneTest {
 
     @Test
     void testGetRandomTextReturnsEmptyOnNullMyText() {
-        markovOne.setMyText(null); // Assuming setter
+        markovOne.setMyText(null);
         assertEquals("", markovOne.getRandomText(5));
     }
     @Test
