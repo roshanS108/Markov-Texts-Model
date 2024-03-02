@@ -55,7 +55,6 @@ public class MarkovOneTest {
         markovOne.setMyText(null); // Assuming setter
         assertEquals("", markovOne.getRandomText(5));
     }
-
     @Test
     public void testGetRandomTextContainsOnlyCharacters() {
         String text = "this is a test yes this is a test.";
