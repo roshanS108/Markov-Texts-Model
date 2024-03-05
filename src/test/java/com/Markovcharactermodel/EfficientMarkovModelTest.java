@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class EfficientMarkovModelTest {
 
@@ -23,5 +24,14 @@ public class EfficientMarkovModelTest {
     void testConstructor(){
         assertEquals(2, efficientMarkovModel.getN());
     }
+
+    /**
+     * Test cases to verify .getFollowsMa doesn't returns null value
+     */
+    @Test
+    void testGetFollowsMap(){
+        assertNotNull(efficientMarkovModel.getFollowsMap());
+    }
+
 
 }
