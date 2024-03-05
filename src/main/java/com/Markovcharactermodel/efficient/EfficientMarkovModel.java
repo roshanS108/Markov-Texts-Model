@@ -38,7 +38,6 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
 
         return sb.toString();
     }
-
     public void buildMap() {
         for (int i = 0; i <= myText.length() - n; i++) {
             String key = myText.substring(i, i + n);
@@ -47,7 +46,6 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
                 followsMap.put(key, new ArrayList<String>());
                 continue;
             }
-
             ArrayList<String> follows;
 
             if (!followsMap.containsKey(key)) {
@@ -60,11 +58,9 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
             followsMap.put(key, follows);
         }
     }
-
     public ArrayList<String> getFollows(String key) {
         return followsMap.get(key);
     }
-
     private int getLargestValue() {
         int max = Integer.MIN_VALUE;
 
@@ -98,6 +94,23 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
             System.out.println("largest key = " + key);
         }
     }
+
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    public HashMap<String, ArrayList<String>> getFollowsMap() {
+        return followsMap;
+    }
+
+    public void setFollowsMap(HashMap<String, ArrayList<String>> followsMap) {
+        this.followsMap = followsMap;
+    }
+
     public String toString() {
         return "EfficientMarkovModel of order " + n + ".";
     }
