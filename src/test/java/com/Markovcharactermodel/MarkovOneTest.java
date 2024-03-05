@@ -49,13 +49,11 @@ public class MarkovOneTest {
         assertEquals(500, randomText.length());
 
     }
-
     @Test
     void testGetRandomTextReturnsEmptyOnNullMyText() {
         markovOne.setMyText(null);
         assertEquals("", markovOne.getRandomText(5));
     }
-
     @Test
     void testGetRandomTextLength(){
         String result = markovOne.getRandomText(10);
