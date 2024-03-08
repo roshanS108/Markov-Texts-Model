@@ -1,8 +1,9 @@
 package com.Markovmodel.compile;
 import com.Markovmodel.interfaces.IMarkovModel;
 import com.Markovmodel.markov.MarkovWordOne;
+import com.Markovmodel.markov.MarkovWordTwo;
 import edu.duke.*;
-public class MarkovRunnerWord {
+public class MarkovRunnerWord{
     public void runModel(IMarkovModel markov, String text, int size){
         markov.setTraining(text);
         System.out.println("running with " + markov);
@@ -27,10 +28,10 @@ public class MarkovRunnerWord {
 
         st = st.replace('\n', ' ');
 
-        MarkovWordOne markovWordOne = new MarkovWordOne();
+//        MarkovWordOne markovWordOne = new MarkovWordOne();
 
-//        MarkovWordTwo markovWordTwo = new MarkovWordTwo();
-        runModel(markovWordOne, st, 120,175);
+        MarkovWordTwo markovWordTwo = new MarkovWordTwo();
+        runModel(markovWordTwo, st, 120,175);
 //
 //        runModel(markovWordTwo, st, 120, 832);
 
