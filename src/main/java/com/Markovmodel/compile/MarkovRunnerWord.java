@@ -52,7 +52,7 @@ public class MarkovRunnerWord {
     }
 
     public static void main(String[] args) {
-        MarkovRunner markovRunner = new MarkovRunner();
+        MarkovRunnerWord markovRunner = new MarkovRunnerWord();
         markovRunner.runMarkov();
     }
 
