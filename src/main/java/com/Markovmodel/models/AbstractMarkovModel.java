@@ -38,7 +38,7 @@ public abstract class AbstractMarkovModel implements IMarkovModel {
     public String getMyText(){
         return this.myText;
     }
-    public void getMyText(String myText){
+    public void setMyText(String myText){
         this.myText = myText;
     }
 }

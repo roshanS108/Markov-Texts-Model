@@ -1,5 +1,4 @@
 package com.Markovcharactermodel.compile;
-
 import com.Markovcharactermodel.efficient.EfficientMarkovModel;
 import com.Markovcharactermodel.interfaces.IMarkovModel;
 import com.Markovcharactermodel.markov.MarkovFour;
@@ -7,7 +6,6 @@ import com.Markovcharactermodel.markov.MarkovModel;
 import com.Markovcharactermodel.markov.MarkovOne;
 import com.Markovcharactermodel.markov.MarkovZero;
 import edu.duke.FileResource;
-
 public class MarkovRunnerWithInterface {
 
     public void runModel(IMarkovModel markov, String text, int size, int seed) {
@@ -60,20 +58,16 @@ public class MarkovRunnerWithInterface {
         EfficientMarkovModel emm = new EfficientMarkovModel(2);
         runModel(emm, st, size, seed);
     }
-
     public void testHashMap() {
         int seed = 42;
         int size = 50;
         String text = "yes-this-is-a-thin-pretty-pink-thistle";
-
-        EfficientMarkovModel markov = new EfficientMarkovModel(2);
+        EfficientMarkovModel markov = new EfficientMarkovModel(4);
         markov.setTraining(text);
         markov.setRandom(seed);
-
         String st = markov.getRandomText(size);
         printOut(st);
     }
-
     private void printOut(String s){
         String[] words = s.split("\\s+");
         int psize = 0;
@@ -88,7 +82,6 @@ public class MarkovRunnerWithInterface {
         }
         System.out.println("\n----------------------------------");
     }
-
     public static void main(String[] args) {
         MarkovRunnerWithInterface mark = new MarkovRunnerWithInterface();
         mark.testHashMap();

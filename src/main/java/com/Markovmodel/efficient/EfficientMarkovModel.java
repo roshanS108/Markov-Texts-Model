@@ -41,7 +41,7 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
     public void buildMap() {
         for (int i = 0; i <= myText.length() - n; i++) {
             String key = myText.substring(i, i + n);
-
+//            String key = "t";
             // if we have reached the last 'n' characters of the text
             // add the current 'key' to the 'followsMap' with empty list of characters
             if (i == myText.length() - n) {
@@ -55,7 +55,6 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
             } else {
                 follows = followsMap.get(key);
             }
-
             follows.add(myText.substring(i + key.length(), i + key.length() + 1));
             followsMap.put(key, follows);
         }

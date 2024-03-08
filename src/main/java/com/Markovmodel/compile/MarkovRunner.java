@@ -1,4 +1,5 @@
-package com.Markovcharactermodel.markov;
+package com.Markovcharactermodel.compile;
+import com.Markovcharactermodel.markov.*;
 import edu.duke.*;
 
 public class MarkovRunner {
