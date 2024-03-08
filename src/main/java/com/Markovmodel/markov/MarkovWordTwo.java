@@ -1,9 +1,11 @@
 package com.Markovmodel.markov;
 
+import com.Markovmodel.interfaces.IMarkovModel;
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovWordTwo {
+public class MarkovWordTwo implements IMarkovModel {
 
     private String[] myText;
     private Random myRandom;
