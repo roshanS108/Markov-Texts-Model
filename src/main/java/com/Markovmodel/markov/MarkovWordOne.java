@@ -54,10 +54,7 @@ public class MarkovWordOne implements IMarkovModel {
         int pos = 0;
         while (pos < myText.length) {
             int start = indexOf(myText, key, pos);
-            if (start == -1) {
-                break;
-            }
-            if (start >= myText.length - 1) {
+            if (start == -1 || start>=myText.length-1) {
                 break;
             }
             String next = myText[start+1];
@@ -66,9 +63,6 @@ public class MarkovWordOne implements IMarkovModel {
         }
 
         return follows;
-    }
-    public static void main(String[] args) {
-        MarkovWordOne markovWordOne = new MarkovWordOne();
     }
 
 }
