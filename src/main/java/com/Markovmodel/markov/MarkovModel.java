@@ -1,5 +1,5 @@
-package com.Markovcharactermodel.markov;
-import com.Markovcharactermodel.models.AbstractMarkovModel;
+package com.Markovmodel.markov;
+import com.Markovmodel.models.AbstractMarkovModel;
 import java.util.ArrayList;
 public class MarkovModel extends AbstractMarkovModel {
     private int n;

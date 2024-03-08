@@ -1,6 +1,6 @@
-package com.Markovcharactermodel.models;
+package com.Markovmodel.models;
 
-import com.Markovcharactermodel.interfaces.IMarkovModel;
+import com.Markovmodel.MarkovModelCharacter.interfaces.IMarkovModel;
 import java.util.*;
 public abstract class AbstractMarkovModel implements IMarkovModel {
 

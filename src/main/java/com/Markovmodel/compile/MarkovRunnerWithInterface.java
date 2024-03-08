@@ -1,10 +1,10 @@
-package com.Markovcharactermodel.compile;
-import com.Markovcharactermodel.efficient.EfficientMarkovModel;
-import com.Markovcharactermodel.interfaces.IMarkovModel;
-import com.Markovcharactermodel.markov.MarkovFour;
-import com.Markovcharactermodel.markov.MarkovModel;
-import com.Markovcharactermodel.markov.MarkovOne;
-import com.Markovcharactermodel.markov.MarkovZero;
+package com.Markovmodel.compile;
+import com.Markovmodel.efficient.EfficientMarkovModel;
+import com.Markovmodel.interfaces.IMarkovModel;
+import com.Markovmodel.markov.MarkovFour;
+import com.Markovmodel.markov.MarkovModel;
+import com.Markovmodel.markov.MarkovOne;
+import com.Markovmodel.markov.MarkovZero;
 import edu.duke.FileResource;
 public class MarkovRunnerWithInterface {
 

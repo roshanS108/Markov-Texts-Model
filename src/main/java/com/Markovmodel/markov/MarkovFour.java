@@ -1,7 +1,6 @@
-package com.Markovcharactermodel.markov;
-import com.Markovcharactermodel.models.AbstractMarkovModel;
+package com.Markovmodel.markov;
+import com.Markovmodel.models.AbstractMarkovModel;
 
-import java.util.Random;
 import java.util.ArrayList;
 public class MarkovFour extends AbstractMarkovModel {
     public String getRandomText(int numChars){

@@ -1,5 +1,5 @@
-package com.Markovcharactermodel.efficient;
-import com.Markovcharactermodel.models.AbstractMarkovModel;
+package com.Markovmodel.efficient;
+import com.Markovmodel.models.AbstractMarkovModel;
 import java.util.*;
 import java.util.ArrayList;
 public class EfficientMarkovModel extends AbstractMarkovModel {

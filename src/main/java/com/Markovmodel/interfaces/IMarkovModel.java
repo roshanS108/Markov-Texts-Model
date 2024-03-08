@@ -1,4 +1,4 @@
-package com.Markovcharactermodel.interfaces;
+package com.Markovmodel.interfaces;
 
 public interface IMarkovModel {
 

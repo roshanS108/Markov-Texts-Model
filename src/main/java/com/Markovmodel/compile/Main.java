@@ -1,4 +1,4 @@
-package com.Markovcharactermodel.compile;
+package com.Markovmodel.compile;
 
 public class Main {
 

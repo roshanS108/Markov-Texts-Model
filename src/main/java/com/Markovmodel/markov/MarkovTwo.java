@@ -1,9 +1,8 @@
-package com.Markovcharactermodel.markov;
+package com.Markovmodel.markov;
 
-import com.Markovcharactermodel.models.AbstractMarkovModel;
+import com.Markovmodel.models.AbstractMarkovModel;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class MarkovTwo extends AbstractMarkovModel {
     public String getRandomText(int numChars){

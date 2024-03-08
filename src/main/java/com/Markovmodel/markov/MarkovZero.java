@@ -1,5 +1,5 @@
-package com.Markovcharactermodel.markov;
-import com.Markovcharactermodel.models.AbstractMarkovModel;
+package com.Markovmodel.markov;
+import com.Markovmodel.models.AbstractMarkovModel;
 public class MarkovZero extends AbstractMarkovModel {
 	public String getRandomText(int numChars){
 		if (myText == null){
